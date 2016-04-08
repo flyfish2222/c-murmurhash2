@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <stdio.h>
 #include <stdint.h>
 #include "MurmurHash2.h"
@@ -11,8 +12,9 @@ int main() {
     uint32_t seed = 5555;
 
     uint32_t hash = MurmurHash2(key, len, seed);
+    uint32_t expected = 481176376;
 
-    printf("==> Seed: %u\n", hash);
+    assert(hash == expected);
 
     return 0;
 }

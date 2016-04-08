@@ -5,6 +5,10 @@
 #ifndef _MURMURHASH2_H_
 #define _MURMURHASH2_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 //-----------------------------------------------------------------------------
 // Platform-specific functions and macros
 
@@ -34,6 +38,10 @@ uint32_t MurmurHashNeutral2 ( const void * key, int len, uint32_t seed );
 uint32_t MurmurHashAligned2 ( const void * key, int len, uint32_t seed );
 
 //-----------------------------------------------------------------------------
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // _MURMURHASH2_H_
 
